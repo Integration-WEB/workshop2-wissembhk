@@ -1,0 +1,50 @@
+.text{
+    color : red ;
+    font-size  : 20px;
+}
+
+textarea{
+    @extend .text ;
+}
+
+h1{
+    @extend .text;
+}
+
+@mixin btn-style {
+    border: 3px solid yellow;
+}
+
+.button{
+    @include btn-style();
+}
+
+@function background($color){
+    @if($color== white){
+        @return black ;
+    }
+    @else{
+        @return white;
+    }
+}
+
+.h1{
+    color: background(white);
+}
+
+.h2{
+    color: background(red);
+}
+
+$langages: "React","Spring","python";
+
+@function first($langages){
+    @return nth($langages,1);
+}
+@function last($langages){
+    @return nth($langages,length($langages));
+}
+.text{
+    content: last($langages);
+}
+

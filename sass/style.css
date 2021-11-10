@@ -1,0 +1,22 @@
+.text, h1, textarea {
+  color: red;
+  font-size: 20px;
+}
+
+.button {
+  border: 3px solid yellow;
+}
+
+.h1 {
+  color: black;
+}
+
+.h2 {
+  color: white;
+}
+
+.text, textarea, h1 {
+  content: "python";
+}
+
+/*# sourceMappingURL=style.css.map */
